@@ -1,0 +1,41 @@
+<view class="page3Container">
+
+    我是第三个页面，自己搞的
+    <button bindtap="dwdw1">点我点我11111111</button>
+
+    <text>呵呵，我是文本：{{title}}</text>
+     <button bindtap="dwdw2">点击我更改数据</button>
+
+
+    <text>data1和data2和data3：  {{data1+data2+data3}}</text>
+
+    <view>
+        <text wx:if="{{flag}}">呵呵，测试if{{flag}}</text>
+          <button bindtap="dwdw3">更改上面这个家伙的隐藏显示</button>
+      <text wx:if="{{data5>60}}">及格</text>
+<!--
+     <text wx:elif="{{data5<60}}">补考</text>
+          <text wx:else="{{data5<60}}">补考</text>-->
+    </view>
+
+    <view wx:for="{{list1}}">
+        <text >{{index}}  {{item}}</text>
+    </view>
+
+ <view wx:for="{{list2}}">
+        <text class="lvstyle">{{index}}</text>
+         <text class="lvstyle" >{{item.name}}</text>
+        <text  class="lvstyle">{{item.age}}</text>
+    </view>
+
+
+     <view wx:for="{{list3}}">
+        <text class="lvstyle">{{item.type}}</text>
+        <view wx:for="{{item.stus}}" wx:for-index="stu_idext" wx:for-item="stu_item">
+         <text class="lvstyle" >{{stu_idext}}</text>
+         <text class="lvstyle" >{{stu_item.name}}</text>
+        <text  class="lvstyle">{{stu_item.age}}</text>
+        </view>
+
+    </view>
+</view>

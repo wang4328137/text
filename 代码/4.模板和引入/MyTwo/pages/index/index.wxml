@@ -1,0 +1,61 @@
+<!--index.wxml-->
+
+<template name="myT1">
+
+<view class="container">
+  <text>呵呵我是首页的模板</text>
+  <text>{{msg}}</text>
+</view>
+</template>
+
+
+
+<template name="myT2">
+
+<view class="container">
+  <text>呵呵我是MyT2</text>
+  <text>{{msg1}}</text>
+  <text>{{msg2}}</text>
+</view>
+</template>
+
+
+<template name="myT3">
+
+<view class="container">
+  <text>呵呵我是MyT3</text>
+  <text>{{hehe.msg1}}</text>
+  <text>{{hehe.msg2}}</text>
+</view>
+</template>
+
+
+<template is="myT1" ></template>
+<template is="myT2" data="{{msg1,msg2}}"></template>
+<template is="myT3" data="{{hehe}}"></template>
+
+
+<!--<import src="../../templates/MyT4.wxml"/>
+<template is="myT4" data="{{msg4:'xxxxxxxxxx'}}"></template>
+-->
+
+<include src="../../templates/MyT4.wxml"/>
+
+
+<template name="danshu">
+
+<view class="danshu">
+  <text>呵呵我是单数条目 : {{item}}</text>
+</view>
+</template>
+
+<template name="shuangshu">
+
+<view class="shuangshu">
+  <text>呵呵我是双数条目 : {{item}}</text>
+</view>
+</template>
+
+<block wx:for="{{[1, 2, 3, 4, 5,6]}}">
+    <template data="{{item}}" is="{{item % 2 == 0 ? 'shuangshu' : 'danshu'}}"/>
+</block>

@@ -1,0 +1,10 @@
+.page3Container{
+     height: 100%;
+     background-color: #0ff;
+
+}
+.lvstyle{
+    margin: 50rpx;
+    color: blueviolet;
+    background-color: #ff0
+}

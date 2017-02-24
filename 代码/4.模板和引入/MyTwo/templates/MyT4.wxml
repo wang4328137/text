@@ -1,0 +1,9 @@
+<template name="myT4">
+
+<view class="container">
+  <text>呵呵我是通过外部文件定义的模板</text>
+  <text>{{msg4}}</text>
+</view>
+</template>
+
+<text>呵呵我在模板外面呦！</text>

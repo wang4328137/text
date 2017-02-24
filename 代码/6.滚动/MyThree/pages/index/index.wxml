@@ -1,0 +1,35 @@
+<view class="flex_wrp" >
+
+  <text>演示竖向滚动</text>
+  <!--scroll-top="300"-->
+  <scroll-view class="style_scroll" scroll-y="true" 
+  scroll-into-view="{{top}}" 
+
+  scroll-top="{{y_pos}}"
+  >
+    <view id="di_yi_ge" class="flex_wrp">
+        <view class="scroll-view-item bc_green">竖着滚的第一个</view>
+        <view class="scroll-view-item bc_red">竖着滚的第2个</view>
+        <view id="di_san_ge" class="scroll-view-item bc_yellow">竖着滚的第3个</view>
+        <view class="scroll-view-item bc_blue">竖着滚的第4个</view>
+    </view>
+
+  </scroll-view>
+
+  <button>回到顶部</button>
+
+    <button>点一下，往下滚一点</button>
+-------------------------------------------------------------------------------
+      <text>演示横向滚动</text>
+  <!--scroll-top="300"-->
+  <view>
+    <scroll-view class="style_scroll_h" scroll-x="true">
+        <view class="scroll-view-item-h bc_green">横着滚的第一个</view>
+        <view class="scroll-view-item-h bc_red">横着滚的第2个</view>
+        <view  class="scroll-view-item-h bc_yellow">横着滚的第3个</view>
+        <view class="scroll-view-item-h bc_blue">横着滚的第4个</view>
+  </scroll-view>
+  
+  </view>
+
+</view>
